@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<style>
+img{
+	width: 100%;
+  }
+.container-fluid{
+	padding: 0;
+  }
+.carousel-content {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  z-index: 20;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0,0,0,.6);
+  }
+.carousel-indicators li, .carousel-indicators li.active {
+  margin: 0px 7px ;
+  }
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  }
+.navbar-nav > li > a {
+  padding-top:3px ; padding-bottom:3px ;
+  }
+.navbar { 
+  margin-bottom:0px ; 
+  }
+.h{
+	color: blue;
+  }
+  .centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.brand-name {
+font-family: 'Josefin Slab', serif;
+font-size: 20px;
+font-weight: bold;
+color: #444;
+text-decoration: none;
+}
+
+.col-xs-8r,
+.col-sm-8r,
+.col-md-8r,
+.col-lg-8r {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col-xs-8r {
+    width: 12.5%;
+    float: left;
+}
+
+@media (min-width: 768px) {
+    .col-sm-8r {
+        width: 12.5%;
+        float: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-8r {
+        width: 12.5%;
+        float: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-lg-8r {
+        width: 12.5%;
+        float: left;
+    }
+}
+
+
+</style>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-lg  rounded">
+		<!--<div class="container">-->
+    <a class="navbar-brand brand-name" href="#" style=" padding:0px;"><img class="img-responsive2"     
+       src="https://internshala.com/static/images/common/internshala_logo.svg" class="img-fluid" style="height:70%;" >
+       
+   </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#"><span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"></a>
+      </li>
+    </ul>
+    <span class="navbar-text">
+    	<ul class="navbar-nav mr-auto">
+      <li class="nav-item mr-3">
+        <a class="nav-link" href="#">INTERNSHALA STUDENT PARTNER 14 <span class="label label-warning">APPLY</span></a>
+      </li>
+      <li class="nav-item dropdown mr-3">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          INTERSHIPS
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown mr-3">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          ONLINE SUMMER TRAINING
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+    <button class="btn btn-primary my-2 my-sm-0 mr-4 ml-3" type="submit">LOGIN</button>
+    <button class="btn btn-primary my-2 my-sm-0 " type="submit">REGISTER<span class="glyphicon glyphicon-triangle-bottom"></span></button>
+    </ul>
+    </span>
+  </div>
+  </div>
+</nav>
+
+<div class="container-fluid ">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="2.png" alt="Los Angeles" style="width:100%;">
+        <div class="carousel-caption">
+          <h1><strong>Be The Face Of Internshala On Your Campus </strong></h1>
+          <hr>
+          <h3>Transform yourself in next 70 days</h3>
+          <button class="btn btn-warning my-2 my-sm-0 mr-3 ml-3 mb-3" type="submit">APPLY NOW</button>
+          <br><br><br>
+        </div>
+      </div>
+      <div class="item">
+        <img  src="1.png" alt="Chicago" style="width:100%;">
+        <div class="carousel-content" style="color: rgb(25,25,112);">
+          <h1><strong>Internship for 1st Year Students</strong> </h1>
+          <h1> <strong>At ScoopWhoop</strong></h1>
+          <hr style="border-color: rgb(25,25,112);">
+          <h3>I Pay for My New Phone</h3>
+          <p style="font-size: 20px;">Last date to register and apply</p> 
+          <button class="btn btn-primary my-2 my-sm-0 " style="background-color: rgb(25,25,112);" type="submit">APPLY NOW</button>
+          <br><br>
+        </div>
+      </div>
+      <div class="item">
+        <img  src="3.png" alt="New York" style="width:100%;">
+        <div class="carousel-content">
+        	<p style="font-size: 40px; color: rgb(39,39,39);" ><strong>Online Summer Training</strong></p>
+        	<p style="font-size: 30px; color: rgb(39,39,39);">Learn new in-demand skills</p><br>
+        <button class="btn btn-primary my-2 my-sm-0 "  type="submit">KNOW MORE</button><br><br><br>
+        <br>
+        <br>
+        </div>
+    </div>
+    <div class="item">
+        <img  src="4.png" alt="Chicago" style="width:100%;">
+        <div class="carousel-caption" style="color: black;">
+          <h1>Get ahead.<strong>Get an internship!</strong> </h1>
+          <h2><form class="navbar-form center" action="/action_page.php">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search" name="search">
+        <div class="input-group-btn">
+          <button class="btn btn-primary" type="submit">
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+        </div>
+      </div>
+    </form></h2>
+      <br><br>
+        </div>
+      </div>
+    </div>
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  </div>
+  <br>
+<div class="container">
+	<h3 style="text-align: center;">Internship in popular cities</h3><br>
+<div classs="row ">
+<a href="http://google.com" style="color:black;"><div class="col-lg-2 ">
+<div class="thumbnail bg-white bg-white" >
+<img   src="https://internshala.com/static/images/home/discover/city_work_from_home_new.jpg">
+            <div class="carousel-caption">
+              <h4><strong>WORK FROM HOME</strong></h4>
+            </div>
+
+</div>
+</div></a>
+<a href="http://google.com" style="color:black;"><div class="col-lg-2 ">
+<div class="thumbnail bg-white ">
+<img  src="https://internshala.com/static/images/home/discover/city_delhi_new.jpg">
+<div class="carousel-caption">
+              <h4><strong>DELHI NCR</strong></h4><br>
+            </div>
+
+</div>
+</div></a>
+<a href="http://google.com" style="color:black;"><div class="col-lg-2 ">
+<div class="thumbnail bg-white" >
+<img src="https://internshala.com/static/images/home/discover/city_bangalore_new.jpg">
+<div class="carousel-caption">
+              <h4><strong>BANGALORE</strong></h4><br>
+            </div>
+
+</div>
+</div></a>
+<a href="http://google.com" style="color:black;"><div class="col-lg-2 ">
+<div class="thumbnail bg-white" >
+<img src="https://internshala.com/static/images/home/discover/city_mumbai_new.jpg">
+<div class="carousel-caption">
+              <h4><strong>MUMBAI</strong></h4>
+              <br>
+            </div>
+
+</div>
+</div></a>
+<a href="http://google.com" style="color:black;"><div class="col-lg-2 ">
+<div class="thumbnail bg-white" >
+<img src="https://internshala.com/static/images/home/discover/city_hyderabad_new.jpg">
+<div class="carousel-caption">
+              <h4><strong>HYDERABAD</strong></h4>
+            <br>
+            </div>
+
+</div>
+</div></a>
+<a href="http://google.com" style="color:black;"><div class="col-lg-2 ">
+<div class="thumbnail bg-white" >
+<img src="https://internshala.com/static/images/home/discover/city_chennai_new.jpg">
+<div class="carousel-caption">
+              <h4><strong>CHENNAI</strong></h4><br>
+            </div>
+
+</div>
+</div></a>
+</div>
+<h3 style="text-align: center;">Internships in popular categories</h3><br>
+<div classs="row ">
+<a href="http://google.com" style="color:black;"><div class="col-lg-2 ">
+<div class="thumbnail bg-white " >
+<img src="https://internshala.com/static/images/home/discover/category_part_time.png">
+<div class="carousel-caption">
+              <h4><strong>PART-TIME</strong></h4><br>
+            </div>
+</div>
+</div></a>
+<a href="http://google.com" style="color:black;"><div class="col-lg-2 ">
+<div class="thumbnail bg-white" >
+<img src="https://internshala.com/static/images/home/discover/category_engineering_new.jpg">
+<div class="carousel-caption">
+              <h4><strong>ENGINEERING</strong></h4><br>
+            </div>
+
+</div>
+</div></a> 
+<a href="http://google.com" style="color:black;"><div class="col-lg-2 ">
+<div class="thumbnail bg-white">
+<img src="https://internshala.com/static/images/home/discover/category_ngo_new.jpg">
+<div class="carousel-caption">
+              <h4><strong>NGO</strong></h4><br>
+            </div>
+
+</div>
+</div></a>
+<a href="http://google.com" style="color:black;"><div class="col-lg-2 ">
+<div class="thumbnail bg-white" >
+<img src="https://internshala.com/static/images/home/discover/category_mba_new.jpg">
+<div class="carousel-caption">
+              <h4><strong>MBA</strong></h4><br>
+            </div>
+
+</div>
+</div></a>
+<a href="http://google.com" style="color:black;"><div class="col-lg-2 ">
+<div class="thumbnail bg-white" >
+<img src="https://internshala.com/static/images/home/discover/category_design_new.jpg">
+<div class="carousel-caption">
+              <h4><strong>DESIGN</strong></h4><br>
+            </div>
+
+</div>
+</div></a>
+<a href="http://google.com" style="color:black;"><div class="col-lg-2 ">
+<div class="thumbnail bg-white" >
+<img src="https://internshala.com/static/images/home/discover/category_science_new.jpg">
+<div class="carousel-caption">
+              <h4><strong>SCIENCE</strong></h4><br>
+            </div>
+
+</div>
+</div></a>
+</div>
+<br>
+<h3 style="text-align: center;">or view all internships<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+</h3>
+<hr>
+<br>
+<h2 style="text-align: center;">Internshala Trainings</h2>
+<br>
+<div classs="row " style="text-align: center;">
+<a href="http://google.com" style="color:black;"><div class="col-lg-3 ">
+<div class="thumbnail shadow-lg  rounded bg-white" >
+<img src="https://internshala.com/static/images/home/vtc/webdev101.jpg">
+<h4 class="h">Web development</h4>
+<p >Bluid an e-commerce website from scratch</p>
+<br>
+</div>
+</div></a>
+<a href="http://google.com" style="color:black;"><div class="col-lg-3 ">
+<div class="thumbnail shadow-lg  rounded bg-white" >
+<img src="https://internshala.com/static/images/home/vtc/python.jpg">
+<h4 class="h">Python</h4>
+<p >Bluid a fantasy cricket game using Python language</p>
+<br>
+</div>
+</div></a>
+<a href="http://google.com" style="color:black;"><div class="col-lg-3 ">
+<div class="thumbnail shadow-lg  rounded bg-white">
+<img src="https://internshala.com/static/images/home/vtc/marketing101.jpg">
+<h4 class="h">Digital Marketing</h4>
+<p >Learn SEO,email marketing,web analytics and more</p>
+<br>
+</div>
+</div></a>
+<a href="http://google.com" style="color:black;"><div class="col-lg-3 ">
+<div class="thumbnail shadow-lg  rounded bg-white" >
+<img src="https://internshala.com/static/images/home/vtc/hacking.jpg">
+<h4 class="h">Ethical Hacking</h4>
+<p >Learn to hack and secure web applications</p>
+<br>
+</div>
+</div></a>
+</div>
+<div class="text-center">
+<button class="btn btn-primary " style="margin-top: 30px;"  type="submit">View all training programs</button>
+</div>
+</div>
+<br><br>
+<div style="background-color: rgb(20,20,20); color: white;">
+<div class="container">
+<br>
+<div class="row ">
+<div class="col-md-3 col-sm-6 col-xs-6" style="padding: 0;">
+<h4><strong>Internships by places</strong></h4>
+<p>Internship in India</p>
+<p>Internship in Delhi</p>
+<p>Internship in Bangalore</p>
+<p>Internship in Hyderabad</p>
+<p>Internship in Mumbai</p>
+<p>Internship in Chennai</p>
+<p>Internship in Gurgoan</p>
+<p>Internship in Kolkata</p>
+<p>Virtual Internship </p>
+</div>
+<div class="col-md-3 col-sm-6 col-xs-6">
+<h4><strong>Internships by stream</strong></h4>
+<p>Computer Science Internship</p>
+<p>Electronics Internship</p>
+<p>Mechanical Internship</p>
+<p>Civil Internship</p>
+<p>Marketing Internship</p>
+<p>Chemical Internship</p>
+<p>Finance Internship</p>
+<p>Summer Research Fellowship</p>
+<p>Campus Ambassador Program</p>
+</div>
+<div class="col-md-3 col-sm-6 col-xs-6 ">
+<h4><strong>Online Summer Trainings</strong></h4>
+<p>Web Development</p>
+<p>Android App Development</p>
+<p>Programming with Python</p>
+<p>Data Science</p>
+<p>Ethical Hacking</p>
+<p>Core Java</p>
+<p>Digital Marketing</p>
+<p>Advance Excel</p>
+<p>Programming with C & C++</p>
+</div>
+<div class="col-md-3 pull-right col-sm-12 col-xs-12">
+<h4><strong>About Internshala</strong></h4>
+<p>About us</p>
+<p>We're hiring</p>
+<p>Hire interns for your company</p>
+<p>Team Diary</p>
+<p>Blog</p>
+<p>Our Services</p>
+<p>Terms & Conditions</p>
+<p>Privacy</p>
+<p>Contact us</p>
+</div>
+</div>
+<hr>
+<footer class="pull-right">@ Copyright 2019 Interrshala</footer>
+</div>
+</div>
+</body>
